@@ -20,7 +20,7 @@
 :root{color-scheme:light;--olive:#69722c;--olive-d:#565d27;--ink:#3c3d33;--soft:#5e5f52;--gold:#b8955a;--ivory:#fbf9f4;--line:#e3ddcf}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);font:18px/1.55 "Cormorant Garamond",Georgia,serif;overflow-x:clip;background:#b7ac9d url(img/linen.jpg?v=9);background-size:360px}
+body{margin:0;color:var(--ink);font:18px/1.55 "Cormorant Garamond",Georgia,serif;overflow-x:clip;background:#b7ac9d url(img/linen.jpg?v=10);background-size:360px}
 body.locked{overflow:hidden;height:100vh}
 img{display:block;max-width:100%}
 button{font:inherit}
@@ -30,10 +30,10 @@ button{font:inherit}
 a{color:inherit}
 a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font:inherit!important}
 :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-.olivefill-unused{background:#93a246 url(img/linen.jpg?v=9);background-blend-mode:multiply;background-size:300px}
+.olivefill-unused{background:#93a246 url(img/linen.jpg?v=10);background-blend-mode:multiply;background-size:300px}
 
 /* ── cover ── */
-#cover{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:#b7ac9d url(img/linen.jpg?v=9);background-size:360px;transition:opacity .7s cubic-bezier(.4,0,.2,1)}
+#cover{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:#b7ac9d url(img/linen.jpg?v=10);background-size:360px;transition:opacity 1s cubic-bezier(.4,0,.2,1)}
 #cover.out{opacity:0;pointer-events:none}
 .cv{display:grid;justify-items:center;text-align:center;padding:24px;gap:4px}
 .cv .cvnames{font-size:clamp(46px,10vw,74px);margin:4px 0 30px}
@@ -42,7 +42,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 .env>*{position:absolute;pointer-events:none}
 .env-shadow{inset:1.5% 1% 0;border-radius:4px;box-shadow:0 30px 44px -20px rgba(40,35,20,.55),0 6px 14px rgba(0,0,0,.16)}
 .e-back{inset:0;border-radius:4px;background:linear-gradient(#4a521f,#5f6929)}
-.e-card{z-index:1;left:6%;right:6%;top:5%;bottom:3%;background:#fbf9f3;display:flex;flex-direction:column;align-items:center;padding-top:6%;gap:2px;box-shadow:0 1px 3px rgba(0,0,0,.18);transform:translate3d(0,0,0);transition:transform 1s cubic-bezier(.22,1,.36,1) .5s;will-change:transform}
+.e-card{z-index:1;left:6%;right:6%;top:5%;bottom:3%;background:#fbf9f3;display:flex;flex-direction:column;align-items:center;padding-top:6%;gap:2px;box-shadow:0 1px 3px rgba(0,0,0,.18);transform:translate3d(0,0,0);transition:transform 1.3s cubic-bezier(.22,1,.36,1) .65s;will-change:transform}
 .e-card::after{content:"";position:absolute;inset:4.5%;border:1px solid #e6e0d2}
 .e-card .mono{position:relative;width:44px;height:38px;color:var(--olive-d)}
 .e-card .mono b{position:absolute;left:2px;top:-8px;font:400 40px/1 "Pinyon Script",cursive}
@@ -51,17 +51,21 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 .e-card .nm{font:500 clamp(18px,4.2vw,26px)/1.05 "Cormorant Garamond",serif;letter-spacing:.08em;color:var(--olive-d)!important}
 .e-card .dt{font-size:12px;letter-spacing:.22em;color:var(--ink)!important;margin-top:4px}
 .e-card span{text-decoration:none!important}
-.e-pocket{z-index:2;inset:0;border-radius:4px;background:url(img/env-real.jpg?v=9) top/100% 100% no-repeat;clip-path:polygon(0 9.95%,49.4% 78.6%,100% 9.95%,100% 100%,0 100%)}
-.e-flap{z-index:3;left:0;top:0;width:100%;height:78.6%;transform-origin:50% 0;transform-style:preserve-3d;transform:rotateX(0deg);transition:transform .8s cubic-bezier(.65,0,.35,1) .2s,z-index 0s .6s;will-change:transform}
+.e-pocket{z-index:2;inset:0;border-radius:4px;background:url(img/env-real.jpg?v=10) top/100% 100% no-repeat;clip-path:polygon(0 9.95%,49.4% 78.6%,100% 9.95%,100% 100%,0 100%)}
+.e-flap{z-index:3;left:0;top:0;width:100%;height:78.6%;transform-origin:50% 0;transform-style:preserve-3d;transform:rotateX(0deg);transition:transform 1s cubic-bezier(.65,0,.35,1) .25s,z-index 0s .75s;will-change:transform}
 .f-front,.f-back{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
-.f-front{background:url(img/env-real.jpg?v=9) top/100% 127.2% no-repeat;clip-path:polygon(-1% 0,101% 0,101% 12.7%,49.4% 101.5%,-1% 12.7%)}
-.f-back{background:url(img/env-liner-hd.webp?v=9) center/100% 100% no-repeat;transform:rotateX(180deg)}
+.f-front{background:url(img/env-real.jpg?v=10) top/100% 127.2% no-repeat;clip-path:polygon(-1% 0,101% 0,101% 12.7%,49.4% 101.5%,-1% 12.7%)}
+.f-back{background:url(img/env-liner-hd.webp?v=10) center/100% 100% no-repeat;transform:rotateX(180deg)}
 .e-seal{z-index:4;left:50.4%;top:70.8%;width:15.2%;transform:translate3d(-50%,-50%,0);filter:drop-shadow(0 4px 5px rgba(0,0,0,.35));will-change:transform,opacity}
 .env:not(.open) .e-seal{animation:breathe 2.8s cubic-bezier(.45,0,.55,1) infinite}
-.env.open .e-seal{animation:sealOff .6s cubic-bezier(.4,0,.2,1) forwards}
+.env.open .e-seal{animation:sealOff .75s cubic-bezier(.4,0,.2,1) forwards}
+.env.closing .e-card{transition:transform 1.1s cubic-bezier(.65,0,.35,1) 0s}
+.env.closing .e-flap{transition:transform 1s cubic-bezier(.65,0,.35,1) .8s,z-index 0s 1.3s}
+.env.closing .e-seal{animation:sealOn .8s cubic-bezier(.22,1,.36,1) 1.75s both}
 .env.open .e-flap{transform:rotateX(180deg);z-index:0}
 .env.open .e-card{transform:translate3d(0,-50%,0)}
 @keyframes breathe{50%{transform:translate3d(-50%,-50%,0) scale(1.04)}}
+@keyframes sealOn{0%{transform:translate3d(-50%,-95%,0) scale(1.06);opacity:0}70%{transform:translate3d(-50%,-50%,0) scale(.94);opacity:1}100%{transform:translate3d(-50%,-50%,0) scale(1);opacity:1}}
 @keyframes sealOff{0%{transform:translate3d(-50%,-50%,0) scale(1);opacity:1}25%{transform:translate3d(-50%,-50%,0) scale(.92);opacity:1}100%{transform:translate3d(-50%,-95%,0) scale(1.06);opacity:0}}
 .cv{transition:transform 1s cubic-bezier(.22,1,.36,1)}
 #cover.out .cv{transform:translate3d(0,-12px,0) scale(1.03)}
@@ -69,9 +73,9 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 
 /* ── her original invitation ── */
 .pdf{position:relative;width:min(100%,640px);margin:0 auto}
-.pdf img{position:absolute;display:block;height:auto;opacity:0;transform:translate3d(0,48px,0);transition:opacity 1s cubic-bezier(.4,0,.2,1),transform 1.25s cubic-bezier(.22,1,.36,1);will-change:opacity,transform}
+.pdf img{position:absolute;display:block;height:auto;opacity:0;transform:translate3d(0,56px,0);transition:opacity 1.4s cubic-bezier(.4,0,.2,1),transform 1.7s cubic-bezier(.22,1,.36,1);will-change:opacity,transform}
 .pdf img.in{opacity:1;transform:translate3d(0,0,0)}
-.rise{opacity:0;transform:translate3d(0,30px,0);transition:opacity 1s cubic-bezier(.4,0,.2,1),transform 1.2s cubic-bezier(.22,1,.36,1)}
+.rise{opacity:0;transform:translate3d(0,34px,0);transition:opacity 1.4s cubic-bezier(.4,0,.2,1),transform 1.6s cubic-bezier(.22,1,.36,1)}
 .rise.in{opacity:1;transform:translate3d(0,0,0)}
 .cv>*{animation:introRise 1.1s cubic-bezier(.22,1,.36,1) both}
 .cv>*:nth-child(1){animation-delay:.15s}.cv>*:nth-child(2){animation-delay:.28s}.cv>*:nth-child(3){animation-delay:.42s}.cv>*:nth-child(4){animation-delay:.6s}.cv>*:nth-child(5){animation-delay:.85s}
@@ -99,7 +103,7 @@ body.opened .reenv{opacity:1;pointer-events:auto}
    <div class="e-card"><div class="mono"><b>C</b><i>N</i></div><span class="script">Save the date</span><span class="nm">CAMILA<br>&amp; NICK</span><span class="caps dt"><span>09</span> · <span>04</span> · <span>2027</span></span></div>
    <div class="e-pocket"></div>
    <div class="e-flap"><div class="f-front"></div><div class="f-back"></div></div>
-   <img class="e-seal" src="img/seal-pdf.webp?v=9" alt="">
+   <img class="e-seal" src="img/seal-pdf.webp?v=10" alt="">
   </button>
   <div class="tap caps">Toca para abrir · Tap to see inside</div>
  </div>
@@ -115,12 +119,12 @@ body.opened .reenv{opacity:1;pointer-events:auto}
 <script>
 {
 // One entry per invitation version (Invitados 1, 2, …). Link a guest with ?invitados=2
-const INV={"2": {"w": 1440, "h": 10297, "links": [{"x": 37.714, "y": 43.667, "w": 33.471, "h": 2.107, "uri": "https://maps.app.goo.gl/gSUrrUd9CPuR6mM3A", "label": "Ver ubicaci\u00f3n de la ceremonia \u00b7 Ceremony location"}, {"x": 11.194, "y": 79.533, "w": 28.391, "h": 2.865, "uri": "https://www.camilaandnick.com/registry", "label": "Sugerencia de regalo \u00b7 Gift suggestion"}, {"x": 13.845, "y": 70.021, "w": 37.487, "h": 4.215, "uri": "https://www.camilaandnick.com/", "label": "Ver p\u00e1gina \u00b7 Visit website"}, {"x": 16.118, "y": 89.382, "w": 29.115, "h": 5.616, "uri": "https://www.camilaandnick.com/rsvp", "label": "Confirma aqu\u00ed \u00b7 R.S.V.P. here"}, {"x": 61.064, "y": 68.073, "w": 23.777, "h": 1.975, "uri": "https://maps.app.goo.gl/jxMHLZ9EfkpKpbPw7", "label": "Ver ubicaci\u00f3n de la recepci\u00f3n \u00b7 Reception location"}], "pieces": [{"n": "p1", "x": 0.0, "y": 0.0777, "w": 100.0, "h": 24.7839}, {"n": "p2", "x": 0.0, "y": 24.8616, "w": 100.0, "h": 23.3078}, {"n": "p3", "x": 0.0, "y": 48.1694, "w": 100.0, "h": 28.9987}, {"n": "p4", "x": 0.5556, "y": 75.2646, "w": 47.3611, "h": 7.8955}, {"n": "p5", "x": 0.0, "y": 73.8079, "w": 100.0, "h": 26.1921}]}};
+const INV={"2": {"w": 1440, "h": 10297, "links": [{"x": 37.714, "y": 43.667, "w": 33.471, "h": 2.107, "uri": "https://maps.app.goo.gl/gSUrrUd9CPuR6mM3A", "label": "Ver ubicaci\u00f3n de la ceremonia \u00b7 Ceremony location"}, {"x": 11.194, "y": 79.533, "w": 28.391, "h": 2.865, "uri": "https://www.camilaandnick.com/registry", "label": "Sugerencia de regalo \u00b7 Gift suggestion"}, {"x": 13.845, "y": 70.021, "w": 37.487, "h": 4.215, "uri": "https://www.camilaandnick.com/", "label": "Ver p\u00e1gina \u00b7 Visit website"}, {"x": 16.118, "y": 89.382, "w": 29.115, "h": 5.616, "uri": "https://www.camilaandnick.com/rsvp", "label": "Confirma aqu\u00ed \u00b7 R.S.V.P. here"}, {"x": 61.064, "y": 68.073, "w": 23.777, "h": 1.975, "uri": "https://maps.app.goo.gl/jxMHLZ9EfkpKpbPw7", "label": "Ver ubicaci\u00f3n de la recepci\u00f3n \u00b7 Reception location"}], "pieces": [{"n": "p1", "x": 3.2639, "y": 2.4473, "w": 93.125, "h": 21.6665}, {"n": "p2", "x": 5.4861, "y": 25.7065, "w": 89.5139, "h": 21.7054}, {"n": "p3", "x": 3.8889, "y": 49.0725, "w": 94.6528, "h": 28.0956}, {"n": "p4", "x": 3.3333, "y": 75.5948, "w": 44.2361, "h": 7.5168}, {"n": "p5", "x": 6.6667, "y": 73.8079, "w": 90.7639, "h": 22.5891}]}};
 const want=new URLSearchParams(location.search).get('invitados');
 const key=INV[want]?want:Object.keys(INV)[0], v=INV[key];
 const pdf=document.getElementById('pdf');
 pdf.style.aspectRatio=v.w+'/'+v.h;
-const pieces=v.pieces.map((pc,i)=>{const im=document.createElement('img');im.src='img/inv/inv'+key+'-'+pc.n+'.webp?v=9';im.alt=i?'':'Invitación de Camila y Nick';im.decoding='async';
+const pieces=v.pieces.map((pc,i)=>{const im=document.createElement('img');im.src='img/inv/inv'+key+'-'+pc.n+'.webp?v=10';im.alt=i?'':'Invitación de Camila y Nick';im.decoding='async';
  im.style.cssText='left:'+pc.x+'%;top:'+pc.y+'%;width:'+pc.w+'%';pdf.appendChild(im);return im});
 v.links.forEach(l=>{const a=document.createElement('a');a.className='hot';a.href=l.uri;a.setAttribute('aria-label',l.label);
  a.style.cssText='left:'+l.x+'%;top:'+l.y+'%;width:'+l.w+'%;height:'+l.h+'%';pdf.appendChild(a)});
@@ -132,23 +136,32 @@ let io=null;
 function startReveal(){
  if(io) io.disconnect();
  let n=0;
- io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&body.classList.contains('opened')){const el=e.target;el.style.transitionDelay=(n++*0.14)+'s';el.classList.add('in');io.unobserve(el);setTimeout(()=>{n=Math.max(0,n-1)},140)}})},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+ io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&body.classList.contains('opened')){const el=e.target;el.style.transitionDelay=(n++*0.2)+'s';el.classList.add('in');io.unobserve(el);setTimeout(()=>{n=Math.max(0,n-1)},200)}})},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
  [...pieces,foot].forEach(el=>io.observe(el));
 }
 function resetReveal(){[...pieces,foot].forEach(el=>{el.classList.remove('in');el.style.transitionDelay='0s'});if(io)io.disconnect();}
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let timer;
+let timer,closing=false;
 env.addEventListener('click',()=>{
- if(env.classList.contains('open'))return;
+ if(closing||env.classList.contains('open'))return;
  env.classList.add('open');
- timer=setTimeout(()=>{cover.classList.add('out');body.classList.remove('locked');window.scrollTo(0,0);body.classList.add('opened');setTimeout(startReveal,520)},reduce?250:1550);
+ timer=setTimeout(()=>{cover.classList.add('out');body.classList.remove('locked');window.scrollTo(0,0);body.classList.add('opened');setTimeout(startReveal,700)},reduce?250:1950);
 });
 const reclose=()=>{
- clearTimeout(timer);
- body.classList.remove('opened');body.classList.add('locked');resetReveal();
- const els=[env,...env.querySelectorAll('*')];els.forEach(c=>c.style.transition='none');
- env.classList.remove('open');void env.offsetWidth;els.forEach(c=>c.style.transition='');
- cover.classList.remove('wash','out');window.scrollTo(0,0);
+ if(closing||!body.classList.contains('opened'))return;
+ closing=true; clearTimeout(timer); if(io)io.disconnect();
+ // 1. the invitation drifts down and fades
+ [...pieces,foot].forEach(el=>{el.style.transitionDelay='0s';el.classList.remove('in')});
+ setTimeout(()=>{
+  // 2. the cover fades back in with the card still out of the envelope
+  window.scrollTo(0,0); body.classList.remove('opened'); body.classList.add('locked');
+  cover.classList.remove('out');
+  setTimeout(()=>{
+   // 3. card slides back in, flap closes, seal settles back on
+   env.classList.add('closing'); env.classList.remove('open');
+   setTimeout(()=>{env.classList.remove('closing');closing=false},2700);
+  },reduce?100:1000);
+ },reduce?100:900);
 };
 document.getElementById('back').addEventListener('click',reclose);
 document.getElementById('reenv').addEventListener('click',reclose);
