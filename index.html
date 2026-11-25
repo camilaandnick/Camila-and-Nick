@@ -20,7 +20,7 @@
 :root{color-scheme:light;--olive:#69722c;--olive-d:#565d27;--ink:#3c3d33;--soft:#5e5f52;--gold:#b8955a;--ivory:#fbf9f4;--line:#e3ddcf}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);font:18px/1.55 "Cormorant Garamond",Georgia,serif;overflow-x:clip;background:#b7ac9d url(img/linen.jpg?v=12);background-size:360px}
+body{margin:0;color:var(--ink);font:18px/1.55 "Cormorant Garamond",Georgia,serif;overflow-x:clip;background:#b7ac9d url(img/linen.jpg?v=13);background-size:360px}
 body.locked{overflow:hidden;height:100vh}
 img{display:block;max-width:100%}
 button{font:inherit}
@@ -30,10 +30,10 @@ button{font:inherit}
 a{color:inherit}
 a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font:inherit!important}
 :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-.olivefill-unused{background:#93a246 url(img/linen.jpg?v=12);background-blend-mode:multiply;background-size:300px}
+.olivefill-unused{background:#93a246 url(img/linen.jpg?v=13);background-blend-mode:multiply;background-size:300px}
 
 /* ── cover ── */
-#cover{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:#b7ac9d url(img/linen.jpg?v=12);background-size:360px;transition:opacity 1s cubic-bezier(.4,0,.2,1)}
+#cover{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:#b7ac9d url(img/linen.jpg?v=13);background-size:360px;transition:opacity 1s cubic-bezier(.4,0,.2,1)}
 #cover.out{opacity:0;pointer-events:none}
 .cv{display:grid;justify-items:center;text-align:center;padding:24px;gap:4px}
 .cv .cvnames{font-size:clamp(46px,10vw,74px);margin:4px 0 30px}
@@ -51,11 +51,11 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 .e-card .nm{font:500 clamp(18px,4.2vw,26px)/1.05 "Cormorant Garamond",serif;letter-spacing:.08em;color:var(--olive-d)!important}
 .e-card .dt{font-size:12px;letter-spacing:.22em;color:var(--ink)!important;margin-top:4px}
 .e-card span{text-decoration:none!important}
-.e-pocket{z-index:2;inset:0;border-radius:4px;background:url(img/env-real.jpg?v=12) top/100% 100% no-repeat;clip-path:polygon(0 9.95%,49.4% 78.6%,100% 9.95%,100% 100%,0 100%)}
+.e-pocket{z-index:2;inset:0;border-radius:4px;background:url(img/env-real.jpg?v=13) top/100% 100% no-repeat;clip-path:polygon(0 9.95%,49.4% 78.6%,100% 9.95%,100% 100%,0 100%)}
 .e-flap{z-index:3;left:0;top:0;width:100%;height:78.6%;transform-origin:50% 0;transform-style:preserve-3d;transform:rotateX(0deg);transition:transform 1s cubic-bezier(.65,0,.35,1) .25s,z-index 0s .75s;will-change:transform}
 .f-front,.f-back{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
-.f-front{background:url(img/env-real.jpg?v=12) top/100% 127.2% no-repeat;clip-path:polygon(-1% 0,101% 0,101% 12.7%,49.4% 101.5%,-1% 12.7%)}
-.f-back{background:url(img/env-liner-hd.webp?v=12) center/100% 100% no-repeat;transform:rotateX(180deg)}
+.f-front{background:url(img/env-real.jpg?v=13) top/100% 127.2% no-repeat;clip-path:polygon(-1% 0,101% 0,101% 12.7%,49.4% 101.5%,-1% 12.7%)}
+.f-back{background:url(img/env-liner-hd.webp?v=13) center/100% 100% no-repeat;transform:rotateX(180deg)}
 .e-seal{z-index:4;left:50.4%;top:70.8%;width:15.2%;transform:translate3d(-50%,-50%,0);filter:drop-shadow(0 4px 5px rgba(0,0,0,.35));will-change:transform,opacity}
 .env:not(.open) .e-seal{animation:breathe 2.8s cubic-bezier(.45,0,.55,1) infinite}
 .env.open .e-seal{animation:sealOff .75s cubic-bezier(.4,0,.2,1) forwards}
@@ -103,7 +103,7 @@ body.opened .reenv{opacity:1;pointer-events:auto}
    <div class="e-card"><div class="mono"><b>C</b><i>N</i></div><span class="script">Save the date</span><span class="nm">CAMILA<br>&amp; NICK</span><span class="caps dt"><span>09</span> · <span>04</span> · <span>2027</span></span></div>
    <div class="e-pocket"></div>
    <div class="e-flap"><div class="f-front"></div><div class="f-back"></div></div>
-   <img class="e-seal" src="img/seal-pdf.webp?v=12" alt="">
+   <img class="e-seal" src="img/seal-pdf.webp?v=13" alt="">
   </button>
   <div class="tap caps">Toca para abrir · Tap to see inside</div>
  </div>
@@ -124,7 +124,7 @@ const want=new URLSearchParams(location.search).get('invitados');
 const key=INV[want]?want:Object.keys(INV)[0], v=INV[key];
 const pdf=document.getElementById('pdf');
 pdf.style.aspectRatio=v.w+'/'+v.h;
-const pieces=v.pieces.map((pc,i)=>{const im=document.createElement('img');im.src='img/inv/inv'+key+'-'+pc.n+'.webp?v=12';im.alt=i?'':'Invitación de Camila y Nick';im.decoding='async';
+const pieces=v.pieces.map((pc,i)=>{const im=document.createElement('img');im.src='img/inv/inv'+key+'-'+pc.n+'.webp?v=13';im.alt=i?'':'Invitación de Camila y Nick';im.decoding='async';
  im.style.cssText='left:'+pc.x+'%;top:'+pc.y+'%;width:'+pc.w+'%';pdf.appendChild(im);return im});
 v.links.forEach(l=>{const a=document.createElement('a');a.className='hot';a.href=l.uri;a.setAttribute('aria-label',l.label);
  a.style.cssText='left:'+l.x+'%;top:'+l.y+'%;width:'+l.w+'%;height:'+l.h+'%';pdf.appendChild(a)});
