@@ -139,11 +139,13 @@ body.opened .reenv:active{transform:scale(.94);transition-duration:.12s;transiti
 {
 // One entry per invitation version (Invitados 1, 2, …). Link a guest with ?invitados=2
 const INV={"2": {"w": 1440, "h": 10297, "links": [{"x": 37.714, "y": 43.667, "w": 33.471, "h": 2.107, "uri": "https://maps.app.goo.gl/gSUrrUd9CPuR6mM3A", "label": "Ver ubicaci\u00f3n de la ceremonia \u00b7 Ceremony location"}, {"x": 11.194, "y": 79.533, "w": 28.391, "h": 2.865, "uri": "https://www.camilaandnick.com/registry", "label": "Sugerencia de regalo \u00b7 Gift suggestion"}, {"x": 13.845, "y": 70.021, "w": 37.487, "h": 4.215, "uri": "https://www.camilaandnick.com/", "label": "Ver p\u00e1gina \u00b7 Visit website"}, {"x": 16.118, "y": 89.382, "w": 29.115, "h": 5.616, "uri": "https://www.camilaandnick.com/rsvp", "label": "Confirma aqu\u00ed \u00b7 R.S.V.P. here"}, {"x": 61.064, "y": 68.073, "w": 23.777, "h": 1.975, "uri": "https://maps.app.goo.gl/jxMHLZ9EfkpKpbPw7", "label": "Ver ubicaci\u00f3n de la recepci\u00f3n \u00b7 Reception location"}], "pieces": [{"n": "p1", "x": 3.3333, "y": 2.4376, "w": 93.0556, "h": 22.0841}, {"n": "p2", "x": 5.5556, "y": 25.7162, "w": 89.7222, "h": 21.6762}, {"n": "p3", "x": 3.9583, "y": 49.0725, "w": 94.5833, "h": 28.0956}, {"n": "p4", "x": 3.5417, "y": 75.6143, "w": 44.0278, "h": 7.4973}, {"n": "p5", "x": 6.5972, "y": 73.8079, "w": 90.8333, "h": 22.5308}]}};
+// Versions 1–6 are identical except the guest count on the RSVP card (piece p5).
+['1','3','4','5','6'].forEach(k=>{INV[k]={...INV['2'],pieces:INV['2'].pieces.map(pc=>pc.n==='p5'?{...pc,f:'inv'+k+'-p5'}:pc)}});
 const want=new URLSearchParams(location.search).get('invitados');
-const key=INV[want]?want:Object.keys(INV)[0], v=INV[key];
+const key=INV[want]?want:'2', v=INV[key];
 const pdf=document.getElementById('pdf');
 pdf.style.aspectRatio=v.w+'/'+v.h;
-const pieces=v.pieces.map((pc,i)=>{const im=document.createElement('img');im.src='img/inv/inv'+key+'-'+pc.n+'.webp?v=13';im.alt=i?'':'Invitación de Camila y Nick';im.decoding='async';
+const pieces=v.pieces.map((pc,i)=>{const im=document.createElement('img');im.src='img/inv/'+(pc.f||'inv2-'+pc.n)+'.webp?v=14';im.alt=i?'':'Invitación de Camila y Nick';im.decoding='async';
  im.style.cssText='left:'+pc.x+'%;top:'+pc.y+'%;width:'+pc.w+'%';pdf.appendChild(im);return im});
 v.links.forEach(l=>{const a=document.createElement('a');a.className='hot';a.href=l.uri;a.setAttribute('aria-label',l.label);
  a.style.cssText='left:'+l.x+'%;top:'+l.y+'%;width:'+l.w+'%;height:'+l.h+'%';pdf.appendChild(a)});
